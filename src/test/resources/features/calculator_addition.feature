@@ -27,7 +27,7 @@ Feature: Addition Tests
     And User press "="
     Then the display shows "Error"
 
-	#{{Add Two Negative Integers}}
+	#Add Two Negative Integers
   @TEST_CAL-13 @TESTSET_CAL-3
   Scenario Outline: Add Two Negative Integers
 		# This scenario tests the addition of two negative integers
@@ -50,7 +50,7 @@ Feature: Addition Tests
     And User presses "="
     Then the display shows "Error"
 
-	#{{Add Positive and Negative Integers (Positive > Negative)}}
+	#Add Positive and Negative Integers (Positive > Negative)
   @TEST_CAL-15 @TESTSET_CAL-3
   Scenario Outline: Add Positive and Negative Integers (Positive > Negative)
 		# This scenario tests adding a negative integer and a positive integer where the positive is larger than the negative
@@ -64,7 +64,7 @@ Feature: Addition Tests
       | first number | second number | result |
       | -3          | 8         |  5    |
 
-	#{{Add a Large Number}}
+	#Add a Large Number
   @TEST_CAL-17 @TESTSET_CAL-3
   Scenario Outline: Add a Large Number
 		# Tests the addition of  large numbers
