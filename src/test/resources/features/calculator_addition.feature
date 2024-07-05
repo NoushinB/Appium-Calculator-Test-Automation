@@ -6,17 +6,17 @@ Feature: Addition Tests
 
 	#Add Two Positive Integers
   @TEST_CAL-11 @TESTSET_CAL-3
-  Scenario Outline: Add Two Positive Integers
-		# This scenario tests the addition of two positive_integer
-    When User  enter "first_positive_integer"
+  Scenario Outline: Add Two Positive numbers
+		# This scenario tests the addition of two positive_numbers
+    When User  enter "first_positive_number"
     And User  press +
-    And User  enter "second_positive_integer"
+    And User  enter "second_positive_number"
     And User  press =
-    Then the display shows "positive_integer"
+    Then the display shows "result_positive_number"
 
     Examples:
       | first number | second number | result |
-      | 1          | 2           | 3     |
+      | 1            | 2             | 3      |
 
 	#Enter Nothing After Operator
   @TEST_CAL-12 @TESTSET_CAL-3
@@ -27,19 +27,19 @@ Feature: Addition Tests
     And User press "="
     Then the display shows "Error"
 
-	#Add Two Negative Integers
+	# Add Two Negative Integers
   @TEST_CAL-13 @TESTSET_CAL-3
-  Scenario Outline: Add Two Negative Integers
+  Scenario Outline: Add Two Negative numbers
 		# This scenario tests the addition of two negative integers
-    When User enters "first_negative_integer"
+    When User enters "first_negative_number"
     And User presses "+"
-    And User enters "second_negative_integer"
+    And User enters "second_negative_number"
     And User presses "="
-    Then the display shows "negative_integer "
+    Then the display shows "negative_number "
 
     Examples:
       | first number | second number | result |
-      | -2           | -3           | -5      |
+      | -2           | -3            | -5     |
 
 	#Enter Nothing Before Operator
   @TEST_CAL-14 @TESTSET_CAL-3
@@ -52,19 +52,19 @@ Feature: Addition Tests
 
 	#Add Positive and Negative Integers (Positive > Negative)
   @TEST_CAL-15 @TESTSET_CAL-3
-  Scenario Outline: Add Positive and Negative Integers (Positive > Negative)
-		# This scenario tests adding a negative integer and a positive integer where the positive is larger than the negative
-    When User enter "negative_integer"
+  Scenario Outline: Add Positive and Negative numbers (Positive > Negative)
+		# This scenario tests adding a negative number and a positive number where the positive is larger than the negative
+    When User enter "negative_number"
     And User press +
-    And User enter "positive_integer"
+    And User enter "positive_number"
     And User press =
-    Then the display shows "<positive_integer>"
+    Then the display shows "<positive_number>"
 
     Examples:
       | first number | second number | result |
-      | -3          | 8         |  5    |
+      | -3           | 8             | 5      |
 
-	#Add a Large Number
+	#{{Add a Large Number}}
   @TEST_CAL-17 @TESTSET_CAL-3
   Scenario Outline: Add a Large Number
 		# Tests the addition of  large numbers
@@ -75,21 +75,21 @@ Feature: Addition Tests
     Then the display shows "Error"
 
     Examples:
-      | first number | second number | result |
-      | 100,000,000           | 900,00,00            | 1,000,000,000      |
+      | first number | second number | result        |
+      | 100,000,000  | 900,00,00     | 1,000,000,000 |
 
 	#Add Positive and Negative Integers (Positive < Negative)
   @TEST_CAL-16 @TESTSET_CAL-3
-  Scenario Outline: Add Positive and Negative Integers (Positive < Negative)
-		# This scenario tests adding a negative integer and a positive integer where the negative is larger than the positive
+  Scenario Outline: Add Positive and Negative numbers (Positive < Negative)
+		# This scenario tests adding a negative number and a positive number where the negative is larger than the positive
     Given the calculator is turned on
-    When User enter "negative_integer"
+    When User enter "negative_number"
     And User press +
-    And User enter "Positive_integer"
+    And User enter "Positive_number"
     And User press =
-    Then the display shows "negative_integer"
+    Then the display shows "negative_number"
 
     Examples:
       | first number | second number | result |
-      | -7           | 5           | -2     |
+      | -7           | 5             | -2     |
 
