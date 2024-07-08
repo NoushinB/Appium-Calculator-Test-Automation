@@ -3,16 +3,17 @@ Feature: Addition Tests
   Background:
 		#@PRECOND_CAL-10
     Given User is on the calculator page
+    And calculator is cleared
 
 	#Add Two Positive Integers
   @TEST_CAL-11 @TESTSET_CAL-3
   Scenario Outline: Add Two Positive numbers
 		# This scenario tests the addition of two positive_numbers
-    When User  enter "first_positive_number"
-    And User  press +
-    And User  enter "second_positive_number"
-    And User  press =
-    Then the display shows "result_positive_number"
+    When User enter "first_positive_number"
+    And User press "+"
+    And User enter "second_positive_number"
+    And User press "="
+    Then the display shows "result_number"
 
     Examples:
       | first number | second number | result |
@@ -31,11 +32,11 @@ Feature: Addition Tests
   @TEST_CAL-13 @TESTSET_CAL-3
   Scenario Outline: Add Two Negative numbers
 		# This scenario tests the addition of two negative integers
-    When User enters "first_negative_number"
-    And User presses "+"
-    And User enters "second_negative_number"
+    When User enter "first_negative_number"
+    And User press "+"
+    And User enter "second_negative_number"
     And User presses "="
-    Then the display shows "negative_number "
+    Then the display shows "result_number"
 
     Examples:
       | first number | second number | result |
@@ -45,8 +46,8 @@ Feature: Addition Tests
   @TEST_CAL-14 @TESTSET_CAL-3
   Scenario: Enter Nothing Before Operator
 		# This scenario covers the case when the first number is not input When I press "+"
-    When User presses "+"
-    And User enters "first_number"
+    And User press "+"
+    And User enter "first_number"
     And User presses "="
     Then the display shows "Error"
 
@@ -55,10 +56,10 @@ Feature: Addition Tests
   Scenario Outline: Add Positive and Negative numbers (Positive > Negative)
 		# This scenario tests adding a negative number and a positive number where the positive is larger than the negative
     When User enter "negative_number"
-    And User press +
+    And User press "+"
     And User enter "positive_number"
-    And User press =
-    Then the display shows "<positive_number>"
+    And User press "="
+    Then the display shows "result_number"
 
     Examples:
       | first number | second number | result |
@@ -69,9 +70,9 @@ Feature: Addition Tests
   Scenario Outline: Add a Large Number
 		# Tests the addition of  large numbers
     When User enter "first_large_number"
-    And User press +
+    And User press "+"
     And User enter "second_large_number"
-    And User press =
+    And User press "="
     Then the display shows "Error"
 
     Examples:
@@ -82,12 +83,11 @@ Feature: Addition Tests
   @TEST_CAL-16 @TESTSET_CAL-3
   Scenario Outline: Add Positive and Negative numbers (Positive < Negative)
 		# This scenario tests adding a negative number and a positive number where the negative is larger than the positive
-    Given the calculator is turned on
     When User enter "negative_number"
-    And User press +
+    And User press "+"
     And User enter "Positive_number"
-    And User press =
-    Then the display shows "negative_number"
+    And User press "="
+    Then the display shows "result_number"
 
     Examples:
       | first number | second number | result |
