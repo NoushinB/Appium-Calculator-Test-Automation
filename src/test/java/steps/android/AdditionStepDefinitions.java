@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 
 public class AdditionStepDefinitions extends CommonStepDefinitions {
 
-    private CalculatorPage calculatorPage;
+    private final CalculatorPage calculatorPage;
 
     public AdditionStepDefinitions(CalculatorPage calculatorPage) {
         super(calculatorPage);
@@ -15,7 +15,7 @@ public class AdditionStepDefinitions extends CommonStepDefinitions {
 
     @When("User enter {string}")
     public void userEnter(String number) {
-        // TODO: should be 1
+      calculatorPage.clickOnNumber(number);
     }
 
     @And("User press {string}")
@@ -23,8 +23,4 @@ public class AdditionStepDefinitions extends CommonStepDefinitions {
         calculatorPage.clickOnOperatorButton(operator);
     }
 
-    @And("User presses {string}")
-    public void userPresses(String operator) {
-
-    }
 }

@@ -22,7 +22,7 @@ public class CommonStepDefinitions {
 
     @And("calculator is cleared")
     public void calculatorIsCleared() {
-        // TODO: Click on clear button
+        calculatorPage.clickOnOperatorButton("AC");
     }
 
     @Then("the display shows {string}")

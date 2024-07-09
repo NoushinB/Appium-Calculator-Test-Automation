@@ -8,6 +8,10 @@ import java.util.Objects;
 
 public class CalculatorPage extends BasePage {
 
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"result_text_view\")")
+    private WebElement resultTextView;
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"clear_button\")")
+    private WebElement btnClear;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"plus_button\")")
     private WebElement btnAddition;
 
@@ -61,12 +65,14 @@ public class CalculatorPage extends BasePage {
                 return btnDot;
             case "=":
                 return btnEqual;
+            case "AC":
+                return btnClear;
             default:
                 return null;
         }
     }
 
-    private void ClickOnNumber(String number) {
+    public void clickOnNumber(String number) {
         for (int i = 0; i <= number.length(); i++) {
             char num = number.charAt(i);
             Objects.requireNonNull(findNumber(num)).click();

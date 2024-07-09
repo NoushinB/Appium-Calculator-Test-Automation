@@ -13,8 +13,8 @@ Feature: Addition Tests
     And User press "+"
     And User enter "<second number>"
     And User press "="
-    Then the display shows "result_number"
+    Then the display shows "<result number>"
 
     Examples:
-      | first number | second number | result |
-      | 11            | 2             | 3      |
+      | first number | second number | result number |
+      | 11            | 2            | 3             |
