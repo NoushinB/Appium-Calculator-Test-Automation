@@ -48,6 +48,10 @@ public class CalculatorPage extends BasePage {
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"dot_button\")")
     private WebElement btnDot;
 
+    public boolean isCalculatorPageDisplayed() {
+        return reusableUIMethods.isElementDisplayed(resultTextView);
+    }
+
     public String getTextViewResult() {
         return resultTextView.getText();
     }
@@ -67,8 +71,6 @@ public class CalculatorPage extends BasePage {
                 return btnMultiply;
             case "/":
                 return btnDivide;
-            case ".":
-                return btnDot;
             case "=":
                 return btnEqual;
             case "AC":
@@ -79,7 +81,7 @@ public class CalculatorPage extends BasePage {
     }
 
     public void clickOnNumber(String number) {
-        for (int i = 0; i <= number.length(); i++) {
+        for (int i = 0; i < number.length(); i++) {
             char num = number.charAt(i);
             Objects.requireNonNull(findNumber(num)).click();
         }
@@ -107,6 +109,8 @@ public class CalculatorPage extends BasePage {
                 return btnEight;
             case '9':
                 return btnNine;
+            case '.':
+                return btnDot;
             default:
                 return null;
         }

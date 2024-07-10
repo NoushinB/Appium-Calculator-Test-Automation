@@ -1,4 +1,4 @@
-package steps.android;
+package steps.android.calculator;
 
 public class DivisionStepDefinitions {
 
