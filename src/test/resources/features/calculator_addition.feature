@@ -17,4 +17,4 @@ Feature: Addition Tests
 
     Examples:
       | first number | second number | result number |
-      | 11            | 2            | 3             |
+      | 11            | 2            | 13             |

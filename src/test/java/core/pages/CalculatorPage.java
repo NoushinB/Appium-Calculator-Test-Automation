@@ -10,8 +10,10 @@ public class CalculatorPage extends BasePage {
 
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"result_text_view\")")
     private WebElement resultTextView;
+
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"clear_button\")")
     private WebElement btnClear;
+
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"plus_button\")")
     private WebElement btnAddition;
 
@@ -45,6 +47,10 @@ public class CalculatorPage extends BasePage {
     private WebElement btnEqual;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"dot_button\")")
     private WebElement btnDot;
+
+    public String getTextViewResult() {
+        return resultTextView.getText();
+    }
 
     public void clickOnOperatorButton(String operator) {
 
