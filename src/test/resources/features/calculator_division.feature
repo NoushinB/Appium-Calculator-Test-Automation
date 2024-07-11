@@ -8,10 +8,10 @@ Feature: Division Tests
   @TEST_CAL-30 @TESTSET_CAL-6
   Scenario Outline: Divide Two Positive numbers
 		# Divide Two Positive number
-    When the user enters "<first_number>"
-    And the user presses "/"
-    And the user enters "<second_number>"
-    And the user presses "="
+    When User enter "<first_number>"
+    And User press "/"
+    And User enter "<second_number>"
+    And User press "="
     Then the display shows "<result_number>"
 
     Examples:

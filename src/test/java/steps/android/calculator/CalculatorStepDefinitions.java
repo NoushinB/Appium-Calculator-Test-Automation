@@ -5,15 +5,16 @@ import core.pages.NavigationPage;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class CommonStepDefinitions {
+public class CalculatorStepDefinitions {
     private final CalculatorPage calculatorPage;
     private final NavigationPage navigationPage;
 
-    public CommonStepDefinitions() {
+    public CalculatorStepDefinitions() {
         navigationPage = new NavigationPage();
         calculatorPage = new CalculatorPage();
     }
@@ -29,6 +30,16 @@ public class CommonStepDefinitions {
         calculatorPage.clickOnOperatorButton("AC");
         String actual = calculatorPage.getTextViewResult();
         assertEquals("0", actual);
+    }
+
+    @When("User enter {string}")
+    public void userEnter(String number) {
+        calculatorPage.clickOnNumber(number);
+    }
+
+    @And("User press {string}")
+    public void userPress(String operator) {
+        calculatorPage.clickOnOperatorButton(operator);
     }
 
     @Then("the display shows {string}")
