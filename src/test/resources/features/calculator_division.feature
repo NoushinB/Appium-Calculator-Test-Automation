@@ -20,3 +20,17 @@ Feature: Division Tests
       | 24           | 3             | 8      |
       | 1            | 2             | 0.5    |
 
+
+    #Division by Zero
+  @TEST_CAL-33 @TESTSET_CAL-6
+  Scenario Outline: Division by Zero
+		# Division by Zero
+    When User enter "<first_number>"
+    And User press "/"
+    And User enter "0"
+    And User press "="
+    Then the display shows "Error"
+
+    Examples:
+      | first_number |
+      | 10           |

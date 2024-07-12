@@ -19,3 +19,16 @@ Feature: Addition Tests
       | first number | second number | result number |
       | 11           | 2             | 13            |
       | 2.5          | 3             | 5.5           |
+
+    	#Enter Nothing After Operator
+  @TEST_CAL-12 @TESTSET_CAL-3
+  Scenario Outline: Enter Nothing After Operator
+		# Tests the addition of any numeric value
+    When User enter "<first number>"
+    And User press "+"
+    And User press "="
+    Then the display shows "Error"
+
+    Examples:
+      | first number |
+      | 35            |
