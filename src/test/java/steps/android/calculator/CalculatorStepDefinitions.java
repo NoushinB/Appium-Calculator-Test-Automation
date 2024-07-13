@@ -45,6 +45,6 @@ public class CalculatorStepDefinitions {
     @Then("the display shows {string}")
     public void theDisplayShows(String expectedResult) {
         String actual = calculatorPage.getTextViewResult();
-        assertEquals(expectedResult, actual);
+        assertEquals(expectedResult.trim(), actual);
     }
 }

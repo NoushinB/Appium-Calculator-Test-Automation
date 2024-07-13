@@ -23,6 +23,8 @@ public class CalculatorPage extends BasePage {
     private WebElement btnMultiply;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"divide_button\")")
     private WebElement btnDivide;
+    @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"plus_minus_button\")")
+    private WebElement btnPlusMinus;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"one_button\")")
     private WebElement btnOne;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"two_button\")")
@@ -47,6 +49,9 @@ public class CalculatorPage extends BasePage {
     private WebElement btnEqual;
     @AndroidFindBy(uiAutomator = "new UiSelector().resourceId(\"dot_button\")")
     private WebElement btnDot;
+
+    public CalculatorPage() {
+    }
 
     public boolean isCalculatorPageDisplayed() {
         return reusableUIMethods.isElementDisplayed(resultTextView);
@@ -75,6 +80,8 @@ public class CalculatorPage extends BasePage {
                 return btnEqual;
             case "AC":
                 return btnClear;
+            case "+/-":
+                return btnPlusMinus;
             default:
                 return null;
         }
