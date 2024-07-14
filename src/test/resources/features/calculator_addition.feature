@@ -32,11 +32,26 @@ Feature: Addition Tests
     And User enter "<second number>"
     And User press "+/-"
     And User press "="
-    Then the display shows "<result_negative_number> "
+    Then the display shows "<negative result number> "
 
     Examples:
-      | first number | second number | result_negative_number |
+      | first number | second number | negative result number |
       | 2            | 3             | -5                     |
+
+    #Add Positive and Negative numbers (Positive > Negative)
+  @TEST_CAL-15 @TESTSET_CAL-3
+  Scenario Outline: Add Positive and Negative numbers (Positive > Negative)
+		# This scenario tests adding a negative number and a positive number where the positive is larger than the negative
+    When User enter "<first number>"
+    And User press "+/-"
+    And User press "+"
+    And User enter "<second number>"
+    And User press "="
+    Then the display shows "<positive result number>"
+
+    Examples:
+      | first number | second number | positive result number |
+      | 3          | 8         |  5    |
 
     	#Enter Nothing After Operator
   @TEST_CAL-12 @TESTSET_CAL-3
