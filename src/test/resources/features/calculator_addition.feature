@@ -65,3 +65,18 @@ Feature: Addition Tests
     Examples:
       | first number |
       | 35            |
+
+    #Add Positive and Negative numbers (Positive < Negative)
+  @TEST_CAL-16 @TESTSET_CAL-3
+  Scenario Outline: Add Positive and Negative numbers (Positive < Negative)
+		# This scenario tests adding a negative number and a positive number where the negative is larger than the positive
+    When User enter "<first number>"
+    And User press "+/-"
+    And User press "+"
+    And User enter "<second number>"
+    And User press "="
+    Then the display shows "<negative result number>"
+
+    Examples:
+      | first number | second number | negative result number |
+      | 7           | 5           | -2     |
