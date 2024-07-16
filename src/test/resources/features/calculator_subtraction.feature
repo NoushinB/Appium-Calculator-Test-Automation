@@ -20,6 +20,39 @@ Feature: Subtraction Tests
       | 5            | 2             | 3             |
       | 10.2           | 6             | 4.2             |
 
+    #Subtract Two Negative numbers
+  @TEST_CAL-19 @TESTSET_CAL-4
+  Scenario Outline: Subtract Two Negative numbers
+		# This scenario tests the subtraction of two negative numbers
+    When User enter "<first number>"
+    And User press "+/-"
+    And User press "-"
+    And User enter "<second number>"
+    And User press "+/-"
+    And User press "="
+    Then the display shows "<negative result number>"
+
+    Examples:
+      | first number | second number | negative result number |
+      | 5                     | 2                      | -3     |
+      | 10                    | 7                      | -3     |
+
+    #Subtract a Positive number from a Negative number
+  @TEST_CAL-20 @TESTSET_CAL-4
+  Scenario Outline: Subtract a Positive number from a Negative number
+		# This scenario tests subtracting a positive number from a negative number
+    When User enter "<first number>"
+    And User press "+/-"
+    And User press "-"
+    And User enter "<second number>"
+    And User press "="
+    Then the display shows "<result>"
+
+    Examples:
+      | first number | second number | result |
+      | 5               | 3                | -8     |
+      | 10              | 4                | -14    |
+
 #Enter Nothing After Operator for Subtraction
   @TEST_CAL-22 @TESTSET_CAL-4
   Scenario Outline: Enter Nothing After Operator for Subtraction
