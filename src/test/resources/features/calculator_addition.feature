@@ -53,18 +53,6 @@ Feature: Addition Tests
       | first number | second number | positive result number |
       | 3          | 8         |  5    |
 
-    	#Enter Nothing After Operator
-  @TEST_CAL-12 @TESTSET_CAL-3
-  Scenario Outline: Enter Nothing After Operator
-		# Tests the addition of any numeric value
-    When User enter "<first number>"
-    And User press "+"
-    And User press "="
-    Then the display shows "Error"
-
-    Examples:
-      | first number |
-      | 35            |
 
     #Add Positive and Negative numbers (Positive < Negative)
   @TEST_CAL-16 @TESTSET_CAL-3
@@ -80,3 +68,33 @@ Feature: Addition Tests
     Examples:
       | first number | second number | negative result number |
       | 7           | 5           | -2     |
+
+
+    	#Enter Nothing After Operator
+  @TEST_CAL-12 @TESTSET_CAL-3
+  Scenario Outline: Enter Nothing After Operator
+		# Tests the addition of any numeric value
+    When User enter "<first number>"
+    And User press "+"
+    And User press "="
+    Then the display shows "Error"
+
+    Examples:
+      | first number |
+      | 35            |
+
+    #Enter Nothing Before Operator
+  @TEST_CAL-14 @TESTSET_CAL-3
+  Scenario Outline: Enter Nothing Before Operator
+		# This scenario covers the case when the first number is not input When I press "+"
+
+    When User press "+"
+    And User enter "<number>"
+    And User press "="
+    Then the display shows "<number>"
+
+    Examples:
+      | number |
+      | 35     |
+
+
