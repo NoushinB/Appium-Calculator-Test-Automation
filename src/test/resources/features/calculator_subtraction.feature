@@ -53,6 +53,22 @@ Feature: Subtraction Tests
       | 5               | 3                | -8     |
       | 10              | 4                | -14    |
 
+    #Subtract a Negative number from a Positive number
+  @TEST_CAL-21 @TESTSET_CAL-4
+  Scenario Outline:  Subtract a Negative number from a Positive number
+		# This scenario tests subtracting a Negative number from a Positive number
+    When User enter "<first number>"
+    And User press "-"
+    And User enter "<second number>"
+    And User press "+/-"
+    And User press "="
+    Then the display shows "<result number>"
+
+    Examples:
+      | first number | second number | result number |
+      | 7                | 2               | 9      |
+      | 10               | 5               | 15     |
+
 #Enter Nothing After Operator for Subtraction
   @TEST_CAL-22 @TESTSET_CAL-4
   Scenario Outline: Enter Nothing After Operator for Subtraction
