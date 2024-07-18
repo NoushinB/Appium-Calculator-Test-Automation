@@ -16,9 +16,9 @@ Feature: Division Tests
 
     Examples:
       | first_number | second_number | result_number |
-      | 10           | 2             | 5      |
-      | 24           | 3             | 8      |
-      | 1            | 2             | 0.5    |
+      | 10           | 2             | 5             |
+      | 24           | 3             | 8             |
+      | 1            | 2             | 0.5           |
 
     	#Divide Two Negative Numbers
   @TEST_CAL-31 @TESTSET_CAL-6
@@ -34,8 +34,8 @@ Feature: Division Tests
 
     Examples:
       | first_number | second_number | result_number |
-      | 15          | 3            | 5     |
-      | 10         | 4            |2.5      |
+      | 15           | 3             | 5             |
+      | 10           | 4             | 2.5           |
 
     	#Divide a Positive number by a Negative number
   @TEST_CAL-32 @TESTSET_CAL-6
@@ -50,7 +50,7 @@ Feature: Division Tests
 
     Examples:
       | first_number | second_number | result_number |
-      | 5          | 2             | -2.5   |
+      | 5            | 2             | -2.5          |
 
 
     #Division by Zero

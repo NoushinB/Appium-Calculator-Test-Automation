@@ -51,7 +51,7 @@ Feature: Addition Tests
 
     Examples:
       | first number | second number | positive result number |
-      | 3          | 8         |  5    |
+      | 3            | 8             | 5                      |
 
 
     #Add Positive and Negative numbers (Positive < Negative)
@@ -67,7 +67,7 @@ Feature: Addition Tests
 
     Examples:
       | first number | second number | negative result number |
-      | 7           | 5           | -2     |
+      | 7            | 5             | -2                     |
 
 
     	#Enter Nothing After Operator
@@ -81,7 +81,7 @@ Feature: Addition Tests
 
     Examples:
       | first number |
-      | 35            |
+      | 35           |
 
     #Enter Nothing Before Operator
   @TEST_CAL-14 @TESTSET_CAL-3

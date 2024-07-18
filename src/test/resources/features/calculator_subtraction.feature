@@ -18,7 +18,7 @@ Feature: Subtraction Tests
     Examples:
       | first_number | second_number | result_number |
       | 5            | 2             | 3             |
-      | 10.2           | 6             | 4.2             |
+      | 10.2         | 6             | 4.2           |
 
     #Subtract Two Negative numbers
   @TEST_CAL-19 @TESTSET_CAL-4
@@ -34,8 +34,8 @@ Feature: Subtraction Tests
 
     Examples:
       | first number | second number | negative result number |
-      | 5                     | 2                      | -3     |
-      | 10                    | 7                      | -3     |
+      | 5            | 2             | -3                     |
+      | 10           | 7             | -3                     |
 
     #Subtract a Positive number from a Negative number
   @TEST_CAL-20 @TESTSET_CAL-4
@@ -50,8 +50,8 @@ Feature: Subtraction Tests
 
     Examples:
       | first number | second number | result |
-      | 5               | 3                | -8     |
-      | 10              | 4                | -14    |
+      | 5            | 3             | -8     |
+      | 10           | 4             | -14    |
 
     #Subtract a Negative number from a Positive number
   @TEST_CAL-21 @TESTSET_CAL-4
@@ -66,8 +66,8 @@ Feature: Subtraction Tests
 
     Examples:
       | first number | second number | result number |
-      | 7                | 2               | 9      |
-      | 10               | 5               | 15     |
+      | 7            | 2             | 9             |
+      | 10           | 5             | 15            |
 
 #Enter Nothing After Operator for Subtraction
   @TEST_CAL-22 @TESTSET_CAL-4

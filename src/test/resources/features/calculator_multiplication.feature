@@ -16,8 +16,8 @@ Feature: Multiplication Tests
 
     Examples:
       | first_number | second_number | result_number |
-      | 2.5            | 2            | 5      |
-      | 10           | 25            | 250    |
+      | 2.5          | 2             | 5             |
+      | 10           | 25            | 250           |
 
     #Multiply a Positive number by a Negative number
   @TEST_CAL-26 @TESTSET_CAL-5
@@ -32,8 +32,8 @@ Feature: Multiplication Tests
 
     Examples:
       | first_number | second_number | result_number |
-      | 4            | 7            | -28    |
-     | 12          | 6             | -72    |
+      | 4            | 7             | -28           |
+      | 12           | 6             | -72           |
 
     #Multiply Two Negative number
   @TEST_CAL-25 @TESTSET_CAL-5
@@ -49,8 +49,8 @@ Feature: Multiplication Tests
 
     Examples:
       | first_number | second_number | result_number |
-      | 5           | 2            | 10     |
-      | 8           | 3            | 24     |
+      | 5            | 2             | 10            |
+      | 8            | 3             | 24            |
 
 
 #Multiply by Zero
@@ -65,7 +65,7 @@ Feature: Multiplication Tests
 
     Examples:
       | first_number |
-      | 4         |
+      | 4            |
       | 4.5          |
 
     	#Enter Nothing After Operator for Multiplication
