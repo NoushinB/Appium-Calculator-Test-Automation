@@ -1,4 +1,4 @@
-# Automation Test Calculator Project
+# Calculator Automation Test Project
 ### Welcome to the Automation Test Calculator Project with Appium and Cucumber!   
 The Automation Test Calculator Project is designed to help you get started with automated testing using Cucumber, Appium, Java, and JUnit. This project focuses on testing a simple calculator app within a clean architecture. Whether you’re a beginner or an experienced tester, this guide provides a well-structured and maintainable setup for writing and executing automated tests.
 
