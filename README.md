@@ -43,8 +43,13 @@ This folder contains all the non-Java resources that your project needs, such as
 ## Test Execution Demo
     
 
-[![Watch the video](https://i.sstatic.net/Vp2cE.png)](https://youtu.be/wbETwOgn2KQ)
-   
+[![Watch the calculator automation test appium DEMO](https://github.com/NoushinB/Appium-Calculator-Test-Automation/blob/master/src/test/resources/documents/calculator_demo.JPG?raw=true)](https://youtu.be/wbETwOgn2KQ)
+
+
+
+
+
+
 
 
 
