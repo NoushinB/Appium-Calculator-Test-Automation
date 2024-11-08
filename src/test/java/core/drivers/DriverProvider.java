@@ -5,11 +5,9 @@ import core.library.PropertyLoader;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-
 
 public class DriverProvider {
     private AppiumDriver driver;
@@ -24,7 +22,6 @@ public class DriverProvider {
     }
 
     private void initializeDriver() {
-
         try {
             if (properties.getPlatform().equalsIgnoreCase(Constants.Platform.ANDROID)) {
                 initializeAndroidDriver();
@@ -45,7 +42,6 @@ public class DriverProvider {
         options.setDeviceName("NoushinEm");
         options.setNewCommandTimeout(Duration.ofSeconds(120));
         options.autoGrantPermissions();
-        options.setChromedriverExecutable("D:\\drivers\\chromedriver_83_0_4103\\chromedriver.exe");
 
         URL url = new URL("http://127.0.0.1:4723");
 

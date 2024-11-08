@@ -11,6 +11,6 @@ public static final class Platform{
     public static final String IOS="ios";
 }
 public static final class Apps{
-    public static final String ANDROID="D:\\maven\\CalculatorTestAutomation\\src\\test\\resources\\apps\\calculator_test.apk";
+    public static final String ANDROID="C:\\Users\\nouba\\IdeaProjects\\Appium-Calculator-Test-Automation\\src\\test\\resources\\apps\\calculator_test.apk";
 }
 }
